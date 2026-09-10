@@ -1,6 +1,10 @@
 #include <stdio.h>
 
 int main() {
-	printf("Hello, Windows!\n");
-	return 0;
-]
+#ifdef _WIN32
+    printf("Hello, Windows!\n");
+#else
+    printf("Hello, Linux!\n");
+#endif
+    return 0;
+}
